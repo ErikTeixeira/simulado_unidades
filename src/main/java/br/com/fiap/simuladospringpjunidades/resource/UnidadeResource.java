@@ -23,6 +23,7 @@ public class UnidadeResource implements ResourceDTO<UnidadeRequest, UnidadeRespo
     @Autowired
     private UnidadeService service;
 
+
     @GetMapping()
     public ResponseEntity<List<UnidadeResponse>> findAll(
             @RequestParam(name="nome", required = false) String nome,
@@ -54,6 +55,7 @@ public class UnidadeResource implements ResourceDTO<UnidadeRequest, UnidadeRespo
         return ResponseEntity.ok(list);
     }
 
+
     @GetMapping(value = "/{id}")
     @Override
     public ResponseEntity<UnidadeResponse> findById(@PathVariable Long id) {
@@ -61,6 +63,7 @@ public class UnidadeResource implements ResourceDTO<UnidadeRequest, UnidadeRespo
         if(Objects.isNull(response)) return ResponseEntity.notFound().build();
         return ResponseEntity.ok(response);
     }
+
 
     @Transactional
     @PostMapping

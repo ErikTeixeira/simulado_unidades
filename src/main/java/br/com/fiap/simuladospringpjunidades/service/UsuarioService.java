@@ -16,6 +16,7 @@ public class UsuarioService implements ServiceDTO<Usuario, UsuarioRequest, Usuar
 
     @Autowired
     private UsuarioRepository usuarioRepo;
+
     @Autowired
     private PessoaService pessoaService;
 
@@ -48,6 +49,7 @@ public class UsuarioService implements ServiceDTO<Usuario, UsuarioRequest, Usuar
     public List<Usuario> findAll(Example<Usuario> example) {
         return usuarioRepo.findAll(example);
     }
+
 
     @Override
     public Usuario findById(Long id) {

@@ -1,11 +1,8 @@
 package br.com.fiap.simuladospringpjunidades.resource;
 
 import br.com.fiap.simuladospringpjunidades.dto.request.ChefeRequest;
-import br.com.fiap.simuladospringpjunidades.dto.request.PessoaRequest;
 import br.com.fiap.simuladospringpjunidades.dto.response.ChefeResponse;
-import br.com.fiap.simuladospringpjunidades.dto.response.PessoaResponse;
 import br.com.fiap.simuladospringpjunidades.entity.Chefe;
-import br.com.fiap.simuladospringpjunidades.entity.Pessoa;
 import br.com.fiap.simuladospringpjunidades.entity.Unidade;
 import br.com.fiap.simuladospringpjunidades.entity.Usuario;
 import br.com.fiap.simuladospringpjunidades.service.ChefeService;
@@ -18,8 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.net.URI;
-import java.util.Collection;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -51,7 +47,7 @@ public class ChefeResource implements ResourceDTO<ChefeRequest, ChefeResponse> {
 
         Example<Chefe> example = Example.of(chefe, matcher);
 
-        System.out.println(example.toString());
+        System.out.println(example);
 
         List<ChefeResponse> list = service.findAll(example)
                 .stream()

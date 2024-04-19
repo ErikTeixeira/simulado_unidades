@@ -17,6 +17,7 @@ public class PessoaService implements ServiceDTO<Pessoa, PessoaRequest, PessoaRe
     @Autowired
     private PessoaRepository pessoaRepo;
 
+
     @Override
     public Pessoa toEntity(PessoaRequest r) {
         if (Objects.isNull(r)) return null;
@@ -50,6 +51,7 @@ public class PessoaService implements ServiceDTO<Pessoa, PessoaRequest, PessoaRe
     public List<Pessoa> findAll(Example<Pessoa> example) {
         return pessoaRepo.findAll(example);
     }
+
 
     @Override
     public Pessoa findById(Long id) {

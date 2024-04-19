@@ -41,7 +41,7 @@ public class UsuarioResource implements ResourceDTO<UsuarioRequest, UsuarioRespo
         ExampleMatcher matcher = ExampleMatcher.matchingAll()
                 .withIgnoreNullValues()
                 .withIgnoreCase()
-                .withMatcher("pessoaNome.nome", ExampleMatcher.GenericPropertyMatchers.contains());;
+                .withMatcher("pessoaNome.nome", ExampleMatcher.GenericPropertyMatchers.contains());
 
         Example<Usuario> example = Example.of(usuario, matcher);
 
@@ -52,6 +52,7 @@ public class UsuarioResource implements ResourceDTO<UsuarioRequest, UsuarioRespo
         return ResponseEntity.ok(list);
 
     }
+
 
     @GetMapping(value = "/{id}")
     @Override

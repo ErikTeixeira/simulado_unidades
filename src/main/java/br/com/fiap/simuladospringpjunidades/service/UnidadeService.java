@@ -58,10 +58,12 @@ public class UnidadeService implements ServiceDTO<Unidade, UnidadeRequest, Unida
         return unidadeRepo.findAll();
     }
 
+
     @Override
     public List<Unidade> findAll(Example<Unidade> example) {
         return unidadeRepo.findAll(example);
     }
+
 
     @Override
     public Unidade findById(Long id) {
