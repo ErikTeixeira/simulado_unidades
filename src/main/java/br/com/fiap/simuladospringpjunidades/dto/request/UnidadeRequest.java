@@ -1,6 +1,6 @@
 package br.com.fiap.simuladospringpjunidades.dto.request;
 
-import jakarta.validation.Valid;
+
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 

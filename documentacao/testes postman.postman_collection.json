@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "af8acafa-8b54-4b0c-bc0e-06b6b619c711",
+		"name": "testes postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30957512"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "localhost/usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"neymar01\",\r\n    \"password\": \"neymar23\",\r\n    \"pessoa\": {\r\n        \"nome\": \"Neymar\",\r\n        \"sobrenome\": \"Santos\",\r\n        \"email\": \"neymarsantos@email.com\",\r\n        \"tipo\": \"PF\",\r\n        \"nascimento\": \"1992-02-05\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/usuario",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/usuario?username=neymar01&pessoaId=1&pessoaNome=Neymar&pessoaSobrenome=Santos&pessoaNascimento=1992-02-05&pessoaTipo=PF&pessoaEmail=neymarsantos@email.com",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"usuario"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "neymar01"
+								},
+								{
+									"key": "pessoaId",
+									"value": "1"
+								},
+								{
+									"key": "pessoaNome",
+									"value": "Neymar"
+								},
+								{
+									"key": "pessoaSobrenome",
+									"value": "Santos"
+								},
+								{
+									"key": "pessoaNascimento",
+									"value": "1992-02-05"
+								},
+								{
+									"key": "pessoaTipo",
+									"value": "PF"
+								},
+								{
+									"key": "pessoaEmail",
+									"value": "neymarsantos@email.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/usuario/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/usuario/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "unidade",
+			"item": [
+				{
+					"name": "localhost/unidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Unidade Bahia\",\r\n    \"sigla\": \"bh_matriz\",\r\n    \"descricao\": \"Unidade Bahia\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/unidade",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"unidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/unidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/unidade?sigla=bh_matriz",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"unidade"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Unidade Bahia",
+									"disabled": true
+								},
+								{
+									"key": "sigla",
+									"value": "bh_matriz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/unidade/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/unidade/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"unidade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chefe",
+			"item": [
+				{
+					"name": "localhost/chefe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"substituto\": true,\r\n    \"inicio\": \"2017-11-22T00:00:00\",\r\n    \"fim\": \"2026-01-01T00:00:00\",\r\n    \"usuario\": {\r\n        \"id\": 1\r\n    },\r\n    \"unidade\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/chefe",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"chefe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/chefe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/chefe?usuarioId=1&unidadeId=1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"chefe"
+							],
+							"query": [
+								{
+									"key": "usuarioId",
+									"value": "1"
+								},
+								{
+									"key": "substituto",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "unidadeId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/chefe/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/chefe/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"chefe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

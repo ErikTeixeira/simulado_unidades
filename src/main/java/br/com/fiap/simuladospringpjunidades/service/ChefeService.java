@@ -16,10 +16,13 @@ public class ChefeService implements ServiceDTO<Chefe, ChefeRequest, ChefeRespon
 
     @Autowired
     private ChefeRepository chefeRepo;
+
     @Autowired
     private UsuarioService usuarioService;
+
     @Autowired
     private UnidadeService unidadeService;
+
 
     @Override
     public Chefe toEntity(ChefeRequest r) {
@@ -60,6 +63,7 @@ public class ChefeService implements ServiceDTO<Chefe, ChefeRequest, ChefeRespon
     public List<Chefe> findAll() {
         return chefeRepo.findAll();
     }
+
 
     @Override
     public List<Chefe> findAll(Example<Chefe> example) {
